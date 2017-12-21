@@ -10,7 +10,7 @@ class PythonOrgSearch(unittest.TestCase):
     def test_search_in_python_org(self):
         driver = self.driver
         driver.get("https://www.wikipedia.org/")
-        self.assertIn("Wiki", driver.title)
+        self.assertIn("Wikipedia", driver.title)
         elem = driver.find_element_by_id("js-link-box-en")
         elem.send_keys(Keys.RETURN)
         elem = driver.find_element_by_id("searchInput")
